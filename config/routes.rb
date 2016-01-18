@@ -7,6 +7,19 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
+    # strains routes
+  get     '/strains',                             to: 'strains#index'
+  get     '/strains/new',                         to: 'strains#new'
+  post    '/strains',                             to: 'strains#create'
+
+  get     '/strains/:id',                         to: 'strains#show'
+  get     '/strains/:id/edit',                    to: 'strains#edit',             as: "edit_strain"
+  put     '/strains/:id',                         to: 'strains#update'
+  delete  '/strains/:id',                         to: 'strains#destroy'
+  get     '/strains/:id/toggle_completed',        to: 'strains#toggle_completed'
+  patch   '/todos/:id',                           to: 'todos#update'
+
+match 'strains/:id/toggle_completed', to: 'todos#toggle_completed', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

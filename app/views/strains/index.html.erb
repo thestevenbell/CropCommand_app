@@ -1,0 +1,53 @@
+<div class="page-header">
+  <%= link_to strains_new_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Add New Strain
+  <% end %>
+  <h1>List of Strains</h1>
+</div>
+
+<div class="table-responsive strains">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Strain Code</th>
+        <th>Source</th>
+        <th>Commercial Strain</th>
+        <th>Common Name</th>
+        <th>Latin Name</th>
+        <th>Date Acquired</th>
+        <th>Active</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @strains) do |strain| %>
+        <td><%= strain.strain_code %></td>
+        <td><%= strain.source_original %></td>
+        <td><%= strain.commercial_name %></td>
+        <td><%= strain.common_name %></td>
+        <td><%= strain.latin_name %></td>
+        <td><%= strain.date_acquired%></td>
+        <td>
+          <%= link_to("/strains/#{strain.id}/toggle_completed") do %>
+            <% if strain.completed %>
+                <span class="glyphicon glyphicon-ok"></span>
+            <% else %>
+                <span class="glyphicon glyphicon-unchecked"></span>
+            <% end %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', strain %></td>
+        <td><%= link_to 'Edit', edit_strain_path(strain) %></td>
+        <td><%= link_to 'Delete', strain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+
+

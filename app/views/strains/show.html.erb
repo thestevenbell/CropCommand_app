@@ -1,0 +1,38 @@
+<div class="page-header">
+<!--   <%= link_to strains_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_strain_path(@strain), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %> -->
+  <h1>Show strain</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Strain Code:</dt>
+  <dd><%= @strain.strain_code %></dd>
+
+  <dt>Active:</dt>
+  <dd><%= @strain.completed %></dd>
+
+   <dt>Created:</dt>
+  <dd><%= @strain.created_at %></dd>
+
+</dl>
+
+<!--     t.string   "primary_key"
+    t.string   "strain_id"
+    t.string   "strain_code",     limit: 120
+    t.string   "source_original", limit: 60
+    t.string   "commercial_name", limit: 30
+    t.string   "common_name",     limit: 60
+    t.string   "latin_name",      limit: 90
+    t.string   "form_received",   limit: 60
+    t.date     "date_acquired"
+    t.string   "photo_url",       limit: 600
+    t.text     "notes"
+    t.boolean  "completed",                   null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false -->
