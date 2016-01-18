@@ -1,4 +1,5 @@
-class Todo < ActiveRecord::Base
+class Strain < ActiveRecord::Base
+  belongs_to :user
   validates :strain_id, presence: true
 
   before_save :default_values
