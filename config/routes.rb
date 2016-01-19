@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :sessions, only:[:new, :create, :destroy]
+
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/sessions/create', to: 'sessions#create',  via: 'post'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   resources :users
+
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
 
@@ -20,7 +28,8 @@ Rails.application.routes.draw do
   get     '/strains/:id/toggle_completed',        to: 'strains#toggle_completed'
   patch   '/todos/:id',                           to: 'todos#update'
 
-match 'strains/:id/toggle_completed', to: 'todos#toggle_completed', via: 'get'
+  match 'strains/:id/toggle_completed', to: 'todos#toggle_completed', via: 'get'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
