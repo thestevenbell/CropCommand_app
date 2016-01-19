@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   get     '/strains/new',                         to: 'strains#new'
   post    '/strains',                             to: 'strains#create'
 
-  get     '/strains/:id',                         to: 'strains#show'
-  get     '/strains/:id/edit',                    to: 'strains#edit',             as: "edit_strain"
+  get     '/strains/:id',                         to: 'strains#show', as: :strain
+  get     '/strains/:id/edit',                    to: 'strains#edit',             as: :edit_strain
   put     '/strains/:id',                         to: 'strains#update'
   delete  '/strains/:id',                         to: 'strains#destroy'
   get     '/strains/:id/toggle_completed',        to: 'strains#toggle_completed'

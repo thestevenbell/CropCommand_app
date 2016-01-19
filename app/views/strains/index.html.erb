@@ -42,7 +42,7 @@
         </td>
         <td><%= link_to 'Show', strain %></td>
         <td><%= link_to 'Edit', edit_strain_path(strain) %></td>
-        <td><%= link_to 'Delete', strain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', strains_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>

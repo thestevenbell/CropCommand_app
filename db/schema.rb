@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118233549) do
+ActiveRecord::Schema.define(version: 20160119200034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "strains", force: :cascade do |t|
     t.string   "primary_key"
-    t.string   "strain_id"
     t.string   "strain_code",     limit: 120
     t.string   "source_original", limit: 60
     t.string   "commercial_name", limit: 30
@@ -34,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160118233549) do
     t.integer  "user_id",                     null: false
   end
 
-  add_index "strains", ["strain_id"], name: "index_strains_on_strain_id", unique: true, using: :btree
   add_index "strains", ["user_id"], name: "index_strains_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|

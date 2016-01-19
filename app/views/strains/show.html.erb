@@ -11,16 +11,47 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Strain Code:</dt>
+  <dt>Strain Code</dt>
   <dd><%= @strain.strain_code %></dd>
+
+  <dt>Original Source</dt>
+  <dd><%= @strain.source_original %></dd>
+
+  <dt>Commecial Name</dt>
+  <dd><%= @strain.commercial_name %></dd>
+
+  <dt>Common Name</dt>
+  <dd><%= @strain.common_name %></dd>
+
+  <dt>Latin Name</dt>
+  <dd><%= @strain.latin_name %></dd>
+
+  <dt>Form Recieved</dt>
+  <dd><%= @strain.form_received %></dd>
+
+  <dt>Date Acquired</dt>
+  <dd><%= @strain.date_acquired %></dd>
 
   <dt>Active:</dt>
   <dd><%= @strain.completed %></dd>
 
-   <dt>Created:</dt>
+  <dt>Created:</dt>
   <dd><%= @strain.created_at %></dd>
 
 </dl>
+
+
+<div class="row-fluid">
+  <div class="span4 offset2">
+  <dl class="dl-horizontal">
+    <dt>Notes</dt>
+      <dd><%= @strain.notes %></dd>
+  </dl>
+  </div>
+  <div class="span4 offset6">
+    <img> </img>
+  </div>
+</div>
 
 <!--     t.string   "primary_key"
     t.string   "strain_id"
