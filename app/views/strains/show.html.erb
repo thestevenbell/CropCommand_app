@@ -1,13 +1,13 @@
 <div class="page-header">
-<!--   <%= link_to strains_path, class: 'btn btn-default' do %>
+ <%= link_to strains_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    Back to Strains List
   <% end %>
   <%= link_to edit_strain_path(@strain), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
-    Edit
-  <% end %> -->
-  <h1>Show strain</h1>
+    Edit This Strain
+  <% end %>
+  <h1>Strain Details</h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -40,14 +40,19 @@
 
 </dl>
 
-
 <div class="row-fluid">
-  <div class="span4 offset2">
-  <dl class="dl-horizontal">
-    <dt>Notes</dt>
+  <div class="span4 offset2 well well-sm">
+    <dl class="dl-horizontal">
+     <dt>Notes</dt>
       <dd><%= @strain.notes %></dd>
-  </dl>
+     <dt> Photo</dt>
+     <dd><%=image_tag(@strain.photo_url, :width => 300) do %>
+      <%= content_tag(@strain.common_name) %>
+      <% end %>
+      </dd>
+    </dl>
   </div>
+</div>
   <div class="span4 offset6">
     <img> </img>
   </div>

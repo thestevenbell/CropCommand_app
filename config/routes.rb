@@ -22,13 +22,13 @@ Rails.application.routes.draw do
   post    '/strains',                             to: 'strains#create'
 
   get     '/strains/:id',                         to: 'strains#show', as: :strain
-  get     '/strains/:id/edit',                    to: 'strains#edit',             as: :edit_strain
+  get     '/strains/:id/edit',                    to: 'strains#edit', as: :edit_strain
   put     '/strains/:id',                         to: 'strains#update'
-  delete  '/strains/:id',                         to: 'strains#destroy'
+  delete  '/strains/:id',                         to: 'strains#destroy', as: :delete
   get     '/strains/:id/toggle_completed',        to: 'strains#toggle_completed'
-  patch   '/todos/:id',                           to: 'todos#update'
+  patch   '/strains/:id',                         to: 'strains#update'
 
-  match 'strains/:id/toggle_completed', to: 'todos#toggle_completed', via: 'get'
+  match 'strains/:id/toggle_completed', to: 'strains#toggle_completed', via: 'get'
 
 
 

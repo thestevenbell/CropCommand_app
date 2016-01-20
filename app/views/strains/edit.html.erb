@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to strains_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back to Strain List
+  <% end %>
+  <%= link_to @strain, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Strain Details
+  <% end %>
+  <h1>Edit Strain</h1>
+</div>
+
+<%= render 'form' %>

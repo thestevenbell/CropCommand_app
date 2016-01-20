@@ -58,7 +58,7 @@ class StrainsController < ApplicationController
   def destroy
     @strain.destroy
     respond_to do |format|
-      format.html { redirect_to strains_path, notice: 'Todo was successfully destroyed.' }
+      format.html { redirect_to strains_path, notice: 'Strain was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

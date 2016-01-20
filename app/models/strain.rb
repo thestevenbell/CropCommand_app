@@ -1,11 +1,12 @@
 class Strain < ActiveRecord::Base
   belongs_to :user
-  # validates :strain_code, presence: true
-  # validates :source_original, presence: true
-  # validates :commercial_name, presence: true
-  # validates :common_name, presence: true
-  # validates :latin_name, presence: true
-  # validates :form_received, presence: true
+  validates :strain_code, presence: true, uniqueness: true
+  validates :source_original, presence: true
+  validates :commercial_name, presence: true
+  validates :common_name, presence: true
+  validates :latin_name, presence: true
+  validates :form_received, presence: true
+
 
   before_save :default_values
 
