@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :strains, dependent: :destroy
+  has_many :lots, dependent: :destroy
 
   before_save { email.downcase! }
 

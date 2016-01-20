@@ -1,0 +1,44 @@
+<div class="page-header">
+  <%= link_to lots_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_lot_path(@lot), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show lot</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Strain code:</dt>
+  <dd><%= @code %></dd>
+
+  <dt>Lot code:</dt>
+  <dd><%= @lot.lot_code %></dd>
+
+  <dt>Event made:</dt>
+  <dd><%= @lot.event_made %></dd>
+
+  <dt>Event shake:</dt>
+  <dd><%= @lot.event_shake %></dd>
+
+  <dt>Event chill:</dt>
+  <dd><%= @lot.event_chill %></dd>
+
+  <dt>Event remove:</dt>
+  <dd><%= @lot.event_remove %></dd>
+
+  <dt>Cycle weeks:</dt>
+  <dd><%= @lot.cycle_weeks %></dd>
+
+  <dt>Units type:</dt>
+  <dd><%= @lot.units_type %></dd>
+
+  <dt>Units number:</dt>
+  <dd><%= @lot.units_number %></dd>
+
+  <dt>Active:</dt>
+  <dd><%= @lot.active %></dd>
+
+</dl>

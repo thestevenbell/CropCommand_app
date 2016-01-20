@@ -1,5 +1,7 @@
 class Strain < ActiveRecord::Base
   belongs_to :user
+  has_many :lots, :class_name => 'Lot', :foreign_key => 'lot_id'
+
   validates :strain_code, presence: true, uniqueness: true
   validates :source_original, presence: true
   validates :commercial_name, presence: true
@@ -17,3 +19,8 @@ class Strain < ActiveRecord::Base
     nil                           # required so that TX will not rollback!!!
   end
 end
+
+
+
+
+

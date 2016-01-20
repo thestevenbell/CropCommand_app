@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to new_lot_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Lot
+  <% end %>
+  <h1>Listing lots</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Lot code</th>
+            <th>Strain code</th>
+            <th>Event made</th>
+            <th>Event shake</th>
+            <th>Event chill</th>
+            <th>Event remove</th>
+            <th>Cycle weeks</th>
+            <th>Units type</th>
+            <th>Units number</th>
+            <th>Active</th>
+            <th></th>
+            <th></th>
+            <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @lots) do |lot| %>
+            <td><%= lot.lot_code %></td>
+            <td><%= @code %></td>
+            <td><%= lot.event_made %></td>
+            <td><%= lot.event_shake %></td>
+            <td><%= lot.event_chill %></td>
+            <td><%= lot.event_remove %></td>
+            <td><%= lot.cycle_weeks %></td>
+            <td><%= lot.units_type %></td>
+            <td><%= lot.units_number %></td>
+            <td><%= lot.active %></td>
+            <td><%= link_to 'Show', lot %></td>
+            <td><%= link_to 'Edit', edit_lot_path(lot) %></td>
+            <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

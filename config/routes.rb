@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :lots
   resources :sessions, only:[:new, :create, :destroy]
 
   match '/signup',  to: 'users#new',            via: 'get'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
+  match '/home', to: 'static_pages#home', via: 'get'
 
   get 'static_pages/home'
 
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
   get     '/strains',                             to: 'strains#index'
   get     '/strains/new',                         to: 'strains#new'
   post    '/strains',                             to: 'strains#create'
-
   get     '/strains/:id',                         to: 'strains#show', as: :strain
   get     '/strains/:id/edit',                    to: 'strains#edit', as: :edit_strain
   put     '/strains/:id',                         to: 'strains#update'

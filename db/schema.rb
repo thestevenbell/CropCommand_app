@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119200034) do
+ActiveRecord::Schema.define(version: 20160120200448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lots", force: :cascade do |t|
+    t.string   "lot_code"
+    t.date     "event_made"
+    t.date     "event_shake"
+    t.date     "event_chill"
+    t.date     "event_remove"
+    t.integer  "cycle_weeks"
+    t.string   "units_type"
+    t.string   "units_number"
+    t.boolean  "active"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "strain_id"
+    t.integer  "strain_code_id"
+    t.integer  "user_id"
+  end
+
+  add_index "lots", ["strain_id"], name: "index_lots_on_strain_id", using: :btree
+  add_index "lots", ["user_id"], name: "index_lots_on_user_id", using: :btree
 
   create_table "strains", force: :cascade do |t|
     t.string   "primary_key"
@@ -47,5 +67,7 @@ ActiveRecord::Schema.define(version: 20160119200034) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "lots", "strains"
+  add_foreign_key "lots", "users"
   add_foreign_key "strains", "users"
 end
