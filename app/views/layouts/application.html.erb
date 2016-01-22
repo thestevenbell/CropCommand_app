@@ -14,8 +14,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-  <body>
-  <%=image_tag('mushrooms.jpg')%>
+  <body style="background-image: url("<%=image_tag('mushrooms.jpg')%>") no-repeat center center fixed;" >
+<!--   <%=image_tag('mushrooms.jpg')%> -->
     <header>
       <%= render 'layouts/navigation' %>
     </header>
