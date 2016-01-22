@@ -8,8 +8,8 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
-# Rails.application.config.assets.precompile += %w(mushrooms.jpg)
-# Rails.application.config.assets.precompile += %w( CropCommandLogoStacked.png )
-# Rails.application.config.assets.precompile += %w( CropCommandLogoHorizontal.png )
-# Rails.application.config.assets.precompile += %w( handsonly.png )
+Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w(mushrooms.jpg)
+Rails.application.config.assets.precompile += %w( CropCommandLogoStacked.png )
+Rails.application.config.assets.precompile += %w( CropCommandLogoHorizontal.png )
+Rails.application.config.assets.precompile += %w( handsonly.png )
