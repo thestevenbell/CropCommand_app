@@ -12,10 +12,11 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-   <%= link_to image_tag('mushrooms.jpg'), :class => "style_image") %>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+       <%= link_to image_tag('mushrooms.jpg'), :class => "style_image") %>
+     <%= image_tag('CropCommandLogoStacked.png') %>
     <main role="main" class="container-fluid">
        <%= render 'layouts/messages' %>
        <%= yield %>
