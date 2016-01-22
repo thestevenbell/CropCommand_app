@@ -1,7 +1,8 @@
 // custom settings for Twitter Bootstrap
 
 body {
-    background: no-repeat center center fixed;
+    background-color: black;
+    no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,6 +10,10 @@ body {
     color: rgb(231, 245, 140);
     font-family: "Consolas", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 4px;
+}
+
+.style_image {
+  margin: 0px auto 0px auto;
 }
 
 // @font-face {
