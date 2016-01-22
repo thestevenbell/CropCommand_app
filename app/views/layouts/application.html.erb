@@ -4,9 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CropCommand Application made with Ruby on Rails, templated with Customized Twitter Bootstrap.">
+  <meta name="description" content="CropCommand Application made with Ruby on Rails, templated with Twitter Bootstrap">
   <meta name="author" content="Steven Bell">
  <title><%= full_title(yield(:title)) %></title>
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,8 +18,6 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-       <%= link_to image_tag('mushrooms.jpg'), :class => "style_image") %>
-     <%= image_tag('CropCommandLogoStacked.png') %>
     <main role="main" class="container-fluid">
        <%= render 'layouts/messages' %>
        <%= yield %>

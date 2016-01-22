@@ -1,6 +1,7 @@
 // custom settings for Twitter Bootstrap
 
 body {
+    background: url(mushrooms.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,12 +10,6 @@ body {
     font-family: "Consolas", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 4px;
 }
-
-.style_image {
-  background: no-repeat center center fixed;
-}
-
-
 
 // @font-face {
 //   font-family: 'Catamaran';
@@ -65,7 +60,7 @@ a{
 }
 
 .navbar {
-  height: 70px;
+  height: 60px;
   padding-top: 6px;
   color: rgb(231, 245, 140);
 }
