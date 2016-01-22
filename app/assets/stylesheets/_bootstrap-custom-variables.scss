@@ -1,7 +1,9 @@
 // custom settings for Twitter Bootstrap
 
+background-image: url("<%=image_path('image.jpg')%>");
+
 body {
-    background: url(mushrooms.jpg) no-repeat center center fixed;
+    background: url("<%=image_path('mushrooms.jpg')%>") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
